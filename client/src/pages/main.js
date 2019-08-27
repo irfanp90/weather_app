@@ -17,12 +17,12 @@ const Api_Key = "aff037fa8290bec3cb782b39075bc667";
 getWeather = async (event) => {
   event.preventDefault();
   const city = event.target.elements.city.value;
-  const country = event.target.elements.country.value;
+  // const country = event.target.elements.country.value;
 
-  const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${Api_Key}`);
+  const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Api_Key}&units=imperial`);
   
   const response = await api_call.json();
-  
+  if (city){
   console.log(response);
 
     this.setState({
@@ -31,8 +31,16 @@ getWeather = async (event) => {
       country: response.sys.country,
       humidity: response.main.humidity,
       error:""
-    })
-
+    });
+  }else{
+    this.setState({
+      temperature: undefined,
+      city: undefined,
+      country: undefined,
+      humidity: undefined,
+      error:"PLEASE ENTER A CITY..."
+    });
+  }
   
 }
 
