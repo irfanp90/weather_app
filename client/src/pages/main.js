@@ -6,6 +6,13 @@ import Weather from "../components/weather";
 const Api_Key = "aff037fa8290bec3cb782b39075bc667";
 
  class Main extends React.Component {
+   state = {
+     temperature: undefined,
+     city: undefined,
+     country: undefined,
+     humidity: undefined,
+     error: undefined
+   }
     
 getWeather = async (event) => {
   event.preventDefault();
@@ -17,8 +24,19 @@ getWeather = async (event) => {
   const response = await api_call.json();
   
   console.log(response);
+
+    this.setState({
+      temperature: response.main.temp,
+      city: response.name,
+      country: response.sys.country,
+      humidity: response.main.humidity,
+      error:""
+    })
+
   
 }
+
+    
 
    render() {
     return (
@@ -27,7 +45,13 @@ getWeather = async (event) => {
       
       <Form getWeather={this.getWeather}/> {/*setting up a prop*/}
 
-      <Weather />
+      <Weather 
+        temperature={this.state.temperature}
+        city={this.state.city}
+        country={this.state.country}
+        humidity={this.state.humidity}
+        error={this.state.error}
+      />
      </div>
     ) 
   }
