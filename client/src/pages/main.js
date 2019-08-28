@@ -8,9 +8,12 @@ const Api_Key = "aff037fa8290bec3cb782b39075bc667";
  class Main extends React.Component {
    state = {
      temperature: undefined,
+     temperatureMax: undefined,
+     temperatureMin: undefined,
      city: undefined,
      country: undefined,
      humidity: undefined,
+     description: undefined,
      error: undefined
    }
     
@@ -27,17 +30,23 @@ getWeather = async (event) => {
 
     this.setState({
       temperature: response.main.temp,
+      temperatureMax: response.main.temp_max,
+      temperatureMin: response.main.temp_min, 
       city: response.name,
       country: response.sys.country,
       humidity: response.main.humidity,
+      description: response.weather[0].description,
       error:""
     });
   }else{
     this.setState({
       temperature: undefined,
+      temperatureMax: undefined,
+      temperatureMin: undefined,
       city: undefined,
       country: undefined,
       humidity: undefined,
+      description: undefined,
       error:"PLEASE ENTER A CITY..."
     });
   }
@@ -55,9 +64,12 @@ getWeather = async (event) => {
 
       <Weather 
         temperature={this.state.temperature}
+        temperatureMax={this.state.temperatureMax}
+        temperatureMin={this.state.temperatureMin}
         city={this.state.city}
         country={this.state.country}
         humidity={this.state.humidity}
+        description={this.state.description}
         error={this.state.error}
       />
      </div>
