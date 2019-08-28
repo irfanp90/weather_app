@@ -1,17 +1,24 @@
 import React from 'react';
-import clouds from "../../images/clouds.jpg";
+import clouds from "../../images/Sunset.jpg";
 const headerStyle = {
   backgroundImage: `url(${clouds})`,
   maxWidth: "100vw",
-  height: "calc(20vw)",
+  height: "calc(25vw)",
   backgroundSize: "cover",
+  position: "relative",
+  fontFamily: "'Palanquin Dark', sans-serif",
+  fontWeight: "bold",
+  fontSize: "60px",
+  padding: "100px 75px 100px 190px",
+  color: "yellow",
+  textShadow: "1px 1px 2px black, 0 0 1em black, 0 0 0.2em black"
   
 
 }
 const Titles = () => (
     <div style={headerStyle}>
-      <h1>Weather Application!! </h1>
-      <p>Get the weather you need... </p>
+      <p>Weather Application!! </p>
+      <h1>Get the weather you need... </h1>
     </div>
   )
 

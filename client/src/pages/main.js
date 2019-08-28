@@ -57,13 +57,14 @@ getWeather = async (event) => {
 
    render() {
     return (
-     <div>
+     <div className="container">
        <br></br>
        <br></br>
       <Titles />
       <br></br>
       <Form getWeather={this.getWeather}/> {/*setting up a prop*/}
       <br></br>
+      <span className="card">
       <Weather 
         temperature={this.state.temperature}
         temperatureMax={this.state.temperatureMax}
@@ -74,6 +75,7 @@ getWeather = async (event) => {
         description={this.state.description}
         error={this.state.error}
       />
+      </span>
      </div>
     ) 
   }
