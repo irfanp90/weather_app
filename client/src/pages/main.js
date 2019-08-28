@@ -58,10 +58,12 @@ getWeather = async (event) => {
    render() {
     return (
      <div>
+       <br></br>
+       <br></br>
       <Titles />
-      
+      <br></br>
       <Form getWeather={this.getWeather}/> {/*setting up a prop*/}
-
+      <br></br>
       <Weather 
         temperature={this.state.temperature}
         temperatureMax={this.state.temperatureMax}
