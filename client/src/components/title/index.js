@@ -1,5 +1,5 @@
 import React from 'react';
-import clouds from "../../images/Sunset.jpg";
+import clouds from "../../images/weather.jpg";
 const headerStyle = {
   backgroundImage: `url(${clouds})`,
   maxWidth: "100vw",
@@ -10,8 +10,9 @@ const headerStyle = {
   fontWeight: "bold",
   fontSize: "60px",
   padding: "100px 75px 100px 190px",
-  color: "yellow",
-  textShadow: "1px 1px 2px black, 0 0 1em black, 0 0 0.2em black"
+  color: "mediumspringgreen",
+  textShadow: "1px 1px 2px black, 0 0 1em black, 0 0 0.2em black",
+  borderStyle: "solid",
   
 
 }

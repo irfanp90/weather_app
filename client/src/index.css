@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: orangered;
+  background-color: darkslategray;
   text-align: center;
   margin: auto;
   
@@ -17,10 +17,15 @@ code {
 }
 
 .data{
-  background-color: lightsalmon;
+  background-color: lightgreen;
   color: black;
+  font-family: "Oswald , sans-serif";
+   font-size: 18px;
 }
 
 .info{
-  color: blue;
+  color: darkgreen;
+  font-weight: bold;
+  font-family: "Oswald , sans-serif";
+  font-size: 20px;
 }
