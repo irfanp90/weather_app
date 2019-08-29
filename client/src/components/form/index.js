@@ -5,7 +5,8 @@ const formStyle = {
   border: "none",
   borderBottom: "4px solid mediumspringgreen",
   backgroundColor: "darkslategray",
-  color:"mediumspringgreen"
+  color:"mediumspringgreen",
+  fontSize: "20px",
 
 }
 const buttonStyle ={
